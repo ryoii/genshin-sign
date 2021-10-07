@@ -1,0 +1,34 @@
+name: CronJob
+
+on:
+  schedule:
+    - cron: "2 0 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: ${{ secrets.uid != null }}
+    env:
+      uid: ${{ secrets.uid }}
+      ctoken: ${{ secrets.ctoken }}
+      stoken: ${{ secrets.stoken }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Go 1.15
+        uses: actions/setup-go@v1
+        with:
+          go-version: 1.15
+
+      - name: Download Go Dependencies
+        run: go mod download
+
+      - name: Build Target
+        run: go build build/genshin ./main
+
+      - name: Chmod for application
+        run: chmod u+x build/genshin
+
+      - name: Execute
+        run: ./build/genshin
