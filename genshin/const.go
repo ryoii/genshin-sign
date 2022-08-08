@@ -8,11 +8,11 @@ const (
 	webUA = "Mozilla/5.0 (Linux; Android 6.0.1; MuMu Build/V417IR; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/52.0.2743.100 Mobile Safari/537.36 miHoYoBBS/" + appVersion
 	appUA = "okhttp/4.8.0"
 
-	appVersion = "2.3.0"
+	appVersion = "2.33.1"
 	//appVersion = "2.13.1"
 
-	// 2.3.0
-	salt = "h8w582wxwgqvahcdkpvdhbh2w9casgfl"
+	// 2.33.1
+	salt = "1OUn34iIy84ypu9cpXyun2VaQ2zuFeLm"
 
 	// 2.13.1
 	//salt = "6zT9berkIjLBimVKLeQiyYCN0tatGDpP"
@@ -28,7 +28,7 @@ const (
 	appReferer = "https://app.mihoyo.com"
 
 	appClientType = "2"
-	webClientType = "5"
+	webClientType = "4"
 
 	acceptEncoding = "gzip"
 
